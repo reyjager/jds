@@ -240,23 +240,24 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
 
-                <form>
+                <form action="/contact" method="POST">
+                    @csrf
                     <div class="mb-3">
-                        <input type="text"
+                        <input type="text" name="name"
                                class="form-control"
-                               placeholder="Your Name">
+                               placeholder="Your Name" required>
                     </div>
 
                     <div class="mb-3">
-                        <input type="email"
+                        <input type="email" name="email"
                                class="form-control"
-                               placeholder="Email Address">
+                               placeholder="Email Address" required>
                     </div>
 
                     <div class="mb-3">
-                        <textarea class="form-control"
+                        <textarea name="message" class="form-control"
                                   rows="5"
-                                  placeholder="Message"></textarea>
+                                  placeholder="Message" required></textarea>
                     </div>
 
                     <button class="btn btn-primary">
