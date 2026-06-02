@@ -23,6 +23,7 @@
                 <a href="/services" class="hover:text-indigo-600 {{ request()->is('services') ? 'text-indigo-600 font-semibold' : '' }}">Services</a>
                 <a href="/portfolio" class="hover:text-indigo-600 {{ request()->is('portfolio') ? 'text-indigo-600 font-semibold' : '' }}">Portfolio</a>
                 <a href="/contact" class="hover:text-indigo-600 {{ request()->is('contact') ? 'text-indigo-600 font-semibold' : '' }}">Contact</a>
+                <a href="/contact" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Get Quote</a>
             </div>
         </div>
     </nav>
@@ -31,8 +32,6 @@
         @yield('content')
     </main>
 
-    <footer class="bg-gray-800 text-white text-center py-6">
-        <p>&copy; {{ date('Y') }} Jaguines Digital Solutions. All rights reserved.</p>
-    </footer>
+    @include('partials.footer')
 </body>
 </html>

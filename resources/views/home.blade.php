@@ -2,7 +2,7 @@
 @section('title', 'Home - Jaguines Digital Solutions')
 
 @section('content')
-<section class="relative bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80');">
+<section class="relative bg-cover bg-center bg-no-repeat min-h-[80vh] flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=100');">
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="relative text-center text-white px-4">
         <h1 class="text-5xl font-bold mb-4">Welcome to Jaguines Digital Solutions</h1>
