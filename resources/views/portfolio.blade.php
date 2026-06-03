@@ -6,14 +6,14 @@
 <section class="relative bg-cover bg-center bg-no-repeat h-[50vh] flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80');">
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative text-center text-white">
-        <h1 class="text-5xl font-bold">Our Portfolio</h1>
+        <h1 class="text-3xl sm:text-5xl font-bold">Our Portfolio</h1>
         <p class="mt-2 text-lg">Portfolio</p>
     </div>
 </section>
 
 {{-- Filter Buttons --}}
 <section class="max-w-7xl mx-auto px-4 pt-16 pb-8 text-center">
-    <div class="space-x-4">
+    <div class="flex flex-wrap justify-center gap-2">
         <button class="filter-btn px-4 py-2 rounded-lg bg-indigo-600 text-white" data-filter="all">All</button>
         <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-indigo-600 hover:text-white" data-filter="web">Web Design</button>
         <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 hover:bg-indigo-600 hover:text-white" data-filter="app">App Development</button>
@@ -23,7 +23,7 @@
 
 {{-- Portfolio Grid --}}
 <section class="max-w-7xl mx-auto px-4 pb-16">
-    <div class="grid md:grid-cols-3 gap-6" id="portfolio-grid">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6" id="portfolio-grid">
         <div class="portfolio-item group relative overflow-hidden rounded-lg shadow cursor-pointer" data-category="web" onclick="openLightbox(this)">
             <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=600&q=80" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110" alt="Project">
             <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center flex-col">

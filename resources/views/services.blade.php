@@ -6,7 +6,7 @@
 <section class="relative bg-cover bg-center bg-no-repeat h-[50vh] flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&w=1920&q=80');">
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative text-center text-white">
-        <h1 class="text-5xl font-bold">Our Services</h1>
+        <h1 class="text-3xl sm:text-5xl font-bold">Our Services</h1>
         <p class="mt-2 text-lg">Services</p>
     </div>
 </section>
