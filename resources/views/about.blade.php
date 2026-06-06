@@ -8,7 +8,7 @@
     <div class="relative text-center text-white">
         {{-- <img src="/images/logo.png" alt="Jaguines Digital Solutions" class="h-24 mx-auto mb-4 mix-blend-screen"> --}}
         <h1 class="text-3xl sm:text-5xl font-bold">About Us</h1>
-        <p class="mt-2 text-lg">About Us</p>
+        {{-- <p class="mt-2 text-lg">About Us</p> --}}
     </div>
 </section>
 

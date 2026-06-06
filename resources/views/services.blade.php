@@ -7,7 +7,7 @@
     <div class="absolute inset-0 bg-black/60"></div>
     <div class="relative text-center text-white">
         <h1 class="text-3xl sm:text-5xl font-bold">Our Services</h1>
-        <p class="mt-2 text-lg">Services</p>
+        {{-- <p class="mt-2 text-lg">Services</p> --}}
     </div>
 </section>
 
