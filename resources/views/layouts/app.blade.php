@@ -10,12 +10,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="icon" href="/images/logo.png" type="image/png">
+
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
     <nav class="bg-white shadow" x-data="{ open: false }">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="/" class="flex items-center space-x-3">
-                <img src="/images/logo.png" alt="Jaguines Digital Solutions" class="h-14 sm:h-20">
+                <img src="/images/logo.png?v=2"  alt="Jaguines Digital Solutions" class="h-14 sm:h-20">
                 <div class="leading-tight">
                     <span class="block text-base sm:text-lg font-bold text-indigo-600 tracking-[0.3em]">JAGUINES</span>
                     <span class="block text-xs text-gray-500 tracking-widest">DIGITAL SOLUTIONS</span>
