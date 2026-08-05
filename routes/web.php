@@ -3,25 +3,37 @@
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 use App\Mail\ContactMessage;
+use App\Http\Controllers\LoginController;
 
-Route::get('/', fn() => view('home', ['users' => \App\Models\User::all()]));
-Route::get('/about', fn() => view('about'));
-Route::get('/services', fn() => view('services'));
-Route::get('/portfolio', fn() => view('portfolio'));
-Route::get('/contact', fn() => view('contact'));
+Route::middleware(['web'])->group(function () {
+    Route::get('/', fn() => view('home'));
 
-Route::post('/contact', function (Illuminate\Http\Request $request) {
-    $request->validate([
-        'name' => 'required',
-        'email' => 'required|email',
-        'message' => 'required',
-    ]);
+    Route::middleware('auth')->group(function () {
+        Route::get('/home', fn() => view('home', ['users' => \App\Models\User::all()]))->name('home');
+    });
 
-    Mail::to('reyjag@jaguines.com')->send(new ContactMessage(
-        name: $request->name,
-        email: $request->email,
-        body: $request->message,
-    ));
+    Route::get('/login', [LoginController::class, 'showForm'])->name('login');
+    Route::post('/login', [LoginController::class, 'login']);
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::get('/about', fn() => view('about'));
+    Route::get('/services', fn() => view('services'));
+    Route::get('/portfolio', fn() => view('portfolio'));
+    Route::get('/contact', fn() => view('contact'));
+    Route::get('/resume', fn() => view('resume.layout'));
 
-    return back()->with('success', 'Message sent successfully!');
+    Route::post('/contact', function (Illuminate\Http\Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required',
+        ]);
+
+        Mail::to('reyjag@jaguines.com')->send(new ContactMessage(
+            name: $request->name,
+            email: $request->email,
+            body: $request->message,
+        ));
+
+        return back()->with('success', 'Message sent successfully!');
+    });
 });

@@ -24,4 +24,6 @@
         <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700">Send Message</button>
     </form>
 </section>
+
+
 @endsection
