@@ -20,6 +20,7 @@ Route::middleware(['web'])->group(function () {
     Route::get('/portfolio', fn() => view('portfolio'));
     Route::get('/contact', fn() => view('contact'));
     Route::get('/resume', fn() => view('resume.layout'));
+    Route::get('/nlfbcAnniversary', fn() => view('nlfbc'));
 
     Route::post('/contact', function (Illuminate\Http\Request $request) {
         $request->validate([
@@ -36,4 +37,6 @@ Route::middleware(['web'])->group(function () {
 
         return back()->with('success', 'Message sent successfully!');
     });
+
+
 });

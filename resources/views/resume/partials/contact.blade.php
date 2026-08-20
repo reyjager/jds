@@ -14,6 +14,7 @@
     </div>
     <div class="sidebar__row">
         <div class="icon">▶️</div>
-        <div class="contact-text">YouTube: reycode.co</div>
+        <div class="contact-text">YouTube: reycode, codejogger,
+reyjager</div>
     </div>
 </div>

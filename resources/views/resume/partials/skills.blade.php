@@ -70,6 +70,11 @@
             <span class="chip">HTML</span>
             <span class="chip">CSS</span>
             <span class="chip">Bootstrap</span>
+            <span class="chip">Angular</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">PHP</span>
+            <span class="chip">Dart Flutter</span>
+            <span class="chip">Phyton</span>
             <span class="chip">AutoCAD</span>
             <span class="chip">Adobe Photoshop</span>
             <span class="chip">Adobe Dreamweaver</span>
