@@ -7,3 +7,44 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+#sidebar,
+#main {
+    transition: width 0.2s ease, margin 0.2s ease, transform 0.2s ease, translate 0.2s ease;
+}
+
+.sidebar-rule {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    html.sidebar-collapsed #sidebar {
+        width: 4.5rem;
+    }
+
+    html.sidebar-collapsed #main {
+        margin-left: 4.5rem;
+    }
+
+    html.sidebar-collapsed .sidebar-label {
+        display: none;
+    }
+
+    html.sidebar-collapsed .sidebar-rule {
+        display: block;
+    }
+
+    html.sidebar-collapsed .sidebar-item {
+        justify-content: center;
+    }
+}
