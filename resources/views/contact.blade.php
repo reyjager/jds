@@ -4,10 +4,7 @@
 @section('content')
 <section class="max-w-3xl mx-auto px-4 py-16">
     <h1 class="text-4xl font-bold mb-8">Contact Us</h1>
-    @if(session('success'))
-        <div x-data="{ show: true }" x-init="setTimeout(() => show = false, 5000)" x-show="show" x-transition class="bg-green-100 text-green-800 px-4 py-3 rounded-lg mb-6">{{ session('success') }}</div>
-    @endif
-    <form action="/contact" method="POST" class="space-y-4">
+    <form action="/contact" method="POST" class="space-y-4" data-track-changes>
         @csrf
         <div>
             <label class="block font-medium mb-1">Name</label>
